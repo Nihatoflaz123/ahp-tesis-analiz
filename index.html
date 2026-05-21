@@ -37,4 +37,57 @@
                 <section class="form-section">
                     <h2 class="section-title">Uzman Bilgileri</h2>
                     <div class="row">
-                        <div class="input-
+                        <div class="input-group"><label>Ad</label><input type="text" name="Ad" required></div>
+                        <div class="input-group"><label>Soyad</label><input type="text" name="Soyad" required></div>
+                    </div>
+                    <div class="row">
+                        <div class="input-group"><label>Ünvan</label><input type="text" name="Unvan" required></div>
+                        <div class="input-group"><label>Tecrübe (Yıl)</label><input type="number" name="Yil" required></div>
+                    </div>
+                </section>
+
+                <section class="form-section">
+                    <h2 class="section-title">Değerlendirme Bölümü</h2>
+                    
+                    <div class="section-title" style="font-size: 0.95rem; margin-top: 30px;">1. Ana Kriterler</div>
+                    <div id="ana-group"></div>
+                    
+                    <div class="section-title" style="font-size: 0.95rem; margin-top: 30px;">2.1. Çevresel Faktörler Alt Kriterleri</div> 
+                    <div id="cev-group"></div>
+                    
+                    <div class="section-title" style="font-size: 0.95rem; margin-top: 30px;">2.2. Ekonomik Faktörler Alt Kriterleri</div> 
+                    <div id="eko-group"></div>
+                    
+                    <div class="section-title" style="font-size: 0.95rem; margin-top: 30px;">2.3. Sosyal & İSG Faktörleri Alt Kriterleri</div> 
+                    <div id="sos-group"></div>
+                    
+                    <div class="section-title" style="font-size: 0.95rem; margin-top: 30px;">2.4. Teknik & Operasyonel Uyum Alt Kriterleri</div> 
+                    <div id="tek-group"></div>
+                </section>
+
+                <section class="form-section">
+                    <h2 class="section-title">Genel Görüşler</h2>
+                    <div class="input-group">
+                        <label>Sürdürülebilirlik uygulamalarında karşılaştığınız en büyük darboğaz nedir?</label>
+                        <textarea name="Sorun" rows="2" placeholder="Cevabınız..."></textarea>
+                    </div>
+                    <div class="input-group">
+                        <label>Sizce tesise entegre edilecek en kritik sürdürülebilirlik adımı ne olmalıdır?</label>
+                        <textarea name="Tavsiye" rows="2" placeholder="Cevabınız..."></textarea>
+                    </div>
+                </section>
+
+                <button type="submit" class="submit-btn" id="submitBtn">Analizi Tamamla</button>
+            </form>
+            
+            <div id="successMessage" style="display: none;" class="success-msg">
+                <div class="check-icon">✔</div>
+                <h2>Teşekkürler!</h2>
+                <p>Değerlendirmeniz başarıyla sisteme iletilmiştir.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
