@@ -1,50 +1,31 @@
 const pairs = {
     ana: [
-        ["Maliyet Faktörü", "Verimlilik Faktörü"], 
-        ["Maliyet Faktörü", "Esneklik Yeteneği"], 
-        ["Maliyet Faktörü", "Risk & Güvenlik"], 
-        ["Maliyet Faktörü", "Alan Kullanımı"], 
-        ["Maliyet Faktörü", "Yönetilebilirlik"], 
-        ["Verimlilik Faktörü", "Esneklik Yeteneği"], 
-        ["Verimlilik Faktörü", "Risk & Güvenlik"], 
-        ["Verimlilik Faktörü", "Alan Kullanımı"], 
-        ["Verimlilik Faktörü", "Yönetilebilirlik"], 
-        ["Esneklik Yeteneği", "Risk & Güvenlik"], 
-        ["Esneklik Yeteneği", "Alan Kullanımı"], 
-        ["Esneklik Yeteneği", "Yönetilebilirlik"], 
-        ["Risk & Güvenlik", "Alan Kullanımı"], 
-        ["Risk & Güvenlik", "Yönetilebilirlik"], 
-        ["Alan Kullanımı", "Yönetilebilirlik"]
+        ["Çevresel Faktörler", "Ekonomik Faktörler"], 
+        ["Çevresel Faktörler", "Sosyal & İSG Faktörleri"], 
+        ["Çevresel Faktörler", "Teknik & Operasyonel Uyum"], 
+        ["Ekonomik Faktörler", "Sosyal & İSG Faktörleri"], 
+        ["Ekonomik Faktörler", "Teknik & Operasyonel Uyum"], 
+        ["Sosyal & İSG Faktörleri", "Teknik & Operasyonel Uyum"]
     ],
-    mal: [
-        ["Malzeme Taşıma Maliyeti", "Kurulum/Yatırım Maliyeti"], 
-        ["Malzeme Taşıma Maliyeti", "İşletme/Operasyon Maliyeti"], 
-        ["Kurulum/Yatırım Maliyeti", "İşletme/Operasyon Maliyeti"]
+    cev: [
+        ["Enerji Verimliliği ve Tasarrufu", "Atık Yönetimi ve Geri Dönüşüm"], 
+        ["Enerji Verimliliği ve Tasarrufu", "Karbon Ayak İzi Azaltımı"], 
+        ["Atık Yönetimi ve Geri Dönüşüm", "Karbon Ayak İzi Azaltımı"]
     ],
-    ver: [
-        ["Üretim/Akış Hızı", "Bekleme Sürelerinin Azaltılması"], 
-        ["Üretim/Akış Hızı", "Kapasite Kullanım Oranı"], 
-        ["Bekleme Sürelerinin Azaltılması", "Kapasite Kullanım Oranı"]
+    eko: [
+        ["İlk Yatırım ve Kurulum Maliyeti", "Operasyonel Tasarruf ve Geri Kazanım"], 
+        ["İlk Yatırım ve Kurulum Maliyeti", "Yatırımın Geri Dönüş Süresi (ROI)"], 
+        ["Operasyonel Tasarruf ve Geri Kazanım", "Yatırımın Geri Dönüş Süresi (ROI)"]
     ],
-    esn: [
-        ["Ürün Çeşitliliğine Uyum", "Talep Değişimine Uyum"], 
-        ["Ürün Çeşitliliğine Uyum", "Hat Değişim Kolaylığı"], 
-        ["Talep Değişimine Uyum", "Hat Değişim Kolaylığı"]
+    sos: [
+        ["İş Sağlığı ve Güvenliği Standartları", "Çalışan Ergonomisi ve Çalışma Ortamı"], 
+        ["İş Sağlığı ve Güvenliği Standartları", "Sürdürülebilirlik Eğitimleri"], 
+        ["Çalışan Ergonomisi ve Çalışma Ortamı", "Sürdürülebilirlik Eğitimleri"]
     ],
-    rsk: [
-        ["İş Kazası Riski", "Arıza Durumunda Üretim Etkisi"], 
-        ["İş Kazası Riski", "Gıda Güvenliği Riski"], 
-        ["Arıza Durumunda Üretim Etkisi", "Gıda Güvenliği Riski"]
-    ],
-    aln: [
-        ["Alan Verimliliği (M²)", "Depolama Alanı Kullanımı"], 
-        ["Alan Verimliliği (M²)", "Gelecekte Genişleme İmkanı"], 
-        ["Depolama Alanı Kullanımı", "Gelecekte Genişleme İmkanı"]
-    ],
-    ynt: [
-        ["Saha Kontrol Kolaylığı", "Bölümler Arası Koordinasyon"], 
-        ["Saha Kontrol Kolaylığı", "Bakım Yönetimi Kolaylığı"], 
-        ["Bölümler Arası Koordinasyon", "Bakım Yönetimi Kolaylığı"]
+    tek: [
+        ["Üretim Süreçlerine ve Akış Hızına Etki", "Altyapıya Entegrasyon Kolaylığı"], 
+        ["Üretim Süreçlerine ve Akış Hızına Etki", "Bakım ve Teknolojik Uyumluluk"], 
+        ["Altyapıya Entegrasyon Kolaylığı", "Bakım ve Teknolojik Uyumluluk"]
     ]
 };
 
@@ -100,7 +81,7 @@ function updateColor(radio, rowId, index) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Kriterleri render et
+    // Kriterleri HTML içindeki div ID'lerine render et
     Object.keys(pairs).forEach(key => render(pairs[key], key + '-group', key.toUpperCase()));
 
     const form = document.getElementById('ahpForm');
