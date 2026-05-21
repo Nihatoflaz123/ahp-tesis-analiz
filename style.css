@@ -80,6 +80,11 @@ body {
     border-radius: 2px;
 }
 
+.kriter-bilgi { background: #f1f5f9; padding: 15px; border-radius: 10px; margin-bottom: 25px; font-size: 0.8rem; border: 1px dashed #cbd5e1; }
+.kriter-bilgi strong { color: var(--primary); display: block; margin-bottom: 8px; font-size: 0.85rem; }
+.kriter-bilgi ul { padding-left: 18px; margin: 0; }
+.kriter-bilgi li { margin-bottom: 6px; color: #334155; line-height: 1.4; }
+
 .input-group { margin-bottom: 18px; }
 
 label {
